@@ -1,6 +1,41 @@
+light_border = solid #ccc 1px
+dark_border  = solid #333 1px
+
 body
   padding: 50px
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif
 
 a
   color: #00B7FF
+
+.chat
+  #transcript
+    width: 600px
+    border: dark_border
+    min-height: 1px
+    table
+      width: 100%
+      tr
+        th, td
+          padding: 5px
+          border-top: light_border
+        th
+          width: 100px
+  
+        &:first-child
+          th, td
+            border-top: 0px
+  
+        &.joined
+          td
+            font-size: 14px
+            font-style: italic
+            color: #888
+  
+        &.message
+          th
+            text-align: right
+            vertical-align: top
+
+  input[type=text]
+    width: 400px
