@@ -14,7 +14,7 @@ I might wrap this with some blog posts to turn it into a simple "First Day With 
     $ git clone git://github.com/scottwb/node-chat-demo.git
     $ cd node-chat-demo
     $ npm update
-    $ node app.js fucker
+    $ node app.js
     ```
 4. Open a few browser windows, each to `http://localhost:3000`
 5. Enter a unique username into each window and login.
