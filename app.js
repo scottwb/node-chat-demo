@@ -60,13 +60,14 @@ io.sockets.on('connection', function(socket) {
         });
     });
 
-    socket.on('message', function(msg) {
+    socket.on('message', function(msg, callback) {
         socket.get('nickname', function(err, name) {
             console.log('Chat message received from ', name);
             io.sockets.emit('message', {
                 username : name,
                 message  : msg
             });
+            callback('received');
         });
     });
 });
