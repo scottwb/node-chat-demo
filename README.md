@@ -9,11 +9,12 @@ I might wrap this with some blog posts to turn it into a simple "First Day With 
 1. Install and run [Redis](http://redis.io/).
 2. Install [node.js](http://nodejs.org/).
 3. Clone this repository, install dependences, and run the server:
-``` bash
-$ git clone http://github.com/scottwb/node-chat-demo
-$ npm update
-$ node app.js
-```
+
+    ```bash
+    $ git clone http://github.com/scottwb/node-chat-demo
+    $ npm update
+    $ node app.js fucker
+    ```
 4. Open a few browser windows, each to `http://localhost:3000`
 5. Enter a unique username into each window and login.
 6. Chat with each other via these separate windows.
