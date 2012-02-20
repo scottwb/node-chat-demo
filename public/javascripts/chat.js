@@ -13,7 +13,6 @@ $(function() {
 });
 
 socket.on('logged in', function(name) {
-    console.log('Logged in as: ', name);
     $('form#login').hide();
     $('.chat').show();
 });

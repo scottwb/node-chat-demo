@@ -1,18 +1,28 @@
 light_border = solid #ccc 1px
 dark_border  = solid #333 1px
 
+centered-div()
+  margin-left: auto
+  margin-right: auto
+
+*
+  box-sizing: border-box
+
 body
-  padding: 50px
   font: 16px "Lucida Grande", Helvetica, Arial, sans-serif
 
 a
   color: #00B7FF
 
+#container
+  width: 600px
+  centered-div()
+
 .chat
   #transcript
-    width: 600px
+    width: 100%
     border: dark_border
-    min-height: 1px
+    margin-bottom: 10px
     table
       width: 100%
       tr
