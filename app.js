@@ -4,6 +4,7 @@
  */
 
 var express    = require('express');
+var stylus     = require('stylus');
 var RedisStore = require('connect-redis')(express);
 var routes     = require('./routes');
 
@@ -20,6 +21,10 @@ app.configure(function(){
   app.use(express.session({secret:"ASecretKey", store:new RedisStore}));
   app.use(express.methodOverride());
   app.use(app.router);
+  app.use(stylus.middleware({
+    src      : __dirname + "/public",
+    compress : true
+  }));
   app.use(express.static(__dirname + '/public'));
 });
 
