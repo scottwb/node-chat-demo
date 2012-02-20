@@ -50,6 +50,13 @@ io.sockets.on('connection', function(socket) {
             socket.emit('logged in', name);
             console.log(name + ' just joined the conversation');
             io.sockets.emit('joined', name);
+
+            socket.on('disconnect', function() {
+                socket.get('nickname', function(err, name) {
+                    console.log(name + ' just left the conversation');
+                    io.sockets.emit('left', name);
+                });
+            });
         });
     });
 

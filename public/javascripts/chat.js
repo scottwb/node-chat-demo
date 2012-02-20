@@ -19,8 +19,16 @@ socket.on('logged in', function(name) {
 
 socket.on('joined', function(name) {
     $('.chat #transcript table').append(
-        "<tr class='joined'><th></th><td>"   +
+        "<tr class='notice'><th></th><td>"   +
         name + " just joined the conversation." +
+        "</td></tr>"
+    );
+});
+
+socket.on('left', function(name) {
+    $('.chat #transcript table').append(
+        "<tr class='notice'><th></th><td>"    +
+        name + " just left the conversation." +
         "</td></tr>"
     );
 });
