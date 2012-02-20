@@ -11,7 +11,8 @@ I might wrap this with some blog posts to turn it into a simple "First Day With 
 3. Clone this repository, install dependences, and run the server:
 
     ```bash
-    $ git clone http://github.com/scottwb/node-chat-demo
+    $ git clone git://github.com/scottwb/node-chat-demo.git
+    $ cd node-chat-demo
     $ npm update
     $ node app.js fucker
     ```
